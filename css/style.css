@@ -1,0 +1,469 @@
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+    --blackColor: #000000;
+    --whiteColor: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    min-height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to top, #ffffff 0%, #ffffff 52%, #999ba0 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h2::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url('../img/separador.png');
+    height: 3rem;
+    width: 10rem;
+    display: block;
+}
+
+::placeholder {
+    font-style: italic;
+    color: var(--blackColor);
+    font-size: 1.6rem;
+}
+
+select {
+    border-radius: 3px;
+    height: 3.5rem;
+    color: var(--blackColor);
+    background-color: rgb(221, 220, 220);
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+option {
+    font-weight: bold;
+}
+
+input, textarea {
+    border-radius: 3px;
+    border: none;
+    outline-color: rgb(73, 73, 73);
+    background-color: rgba(255, 255, 255, .6);
+    color: var(--blackColor);
+}
+
+/* Fuentes
+font-family: 'Architects Daughter', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Oswald', sans-serif;
+*/
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: var(--z-fixed);
+}
+
+.contenedor-all {
+    display: none;
+}
+
+/** Spinner
+
+**/
+
+.contenedor-spinner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: var(--blackColor);
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.border {
+    border-radius: 0.8rem;
+}
+
+.boton {
+    text-decoration: none;
+    background-color: saddlebrown;
+    display: block;
+    padding: 1rem 3rem;
+    color: #var(--whiteColor);
+    width: 75%;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 70%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: 27%;
+    }
+}
+
+.transparent {
+    background-color: transparent;
+    border: 1px solid rgba(136, 231, 136, .5);
+}
+
+.boton:hover {
+    background-color: rgba(136, 231, 136, .6);
+    transition: all .5s ease-in-out;
+    color: var(--blackColor);
+}
+
+.activo {
+    display: none;
+}
+
+/* CSSSSSSSSSSSSSSSSSSS***/
+
+/* CSSSSSSSSSSSSSSSSSSS***/
+
+/* CSSSSSSSSSSSSSSSSSSS***/
+
+/* CSSSSSSSSSSSSSSSSSSS***/
+
+/* CSSSSSSSSSSSSSSSSSSS***/
+
+/** Responsive web Desing**/
+
+.menu-mobile i {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    color: rgb(211, 206, 206);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .menu-mobile i {
+        display: none;
+    }
+}
+
+/** Navegación principal**/
+
+.navegacion {
+    background-color: #0e141f;
+    padding: 0.5rem 0;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        display: flex !important;
+        justify-content: flex-end;
+    }
+}
+
+.navegacion-principal a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    display: block;
+    color: var(--whiteColor);
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.8rem;
+}
+
+.navegacion-principal a:last-of-type {
+    margin-bottom: 0;
+}
+
+.navegacion-principal a:hover {
+    background-color: unset;
+    color: rgba(136, 231, 136, .6);
+}
+
+.navegacion-principal a:last-child:hover {
+    background-color: unset;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal a {
+        margin: 0 2rem;
+    }
+}
+
+/** Parte del hero **/
+
+.hero {
+    background-image: url('/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    height: 40vh;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (min-width: 2000px) {
+    .hero {
+        background-repeat: repeat;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 40vh;
+        width: 100%;
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-normal);
+}
+
+.contenido-hero {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    z-index: var(--z-tooltip);
+}
+
+.contenido-hero h1 {
+    font-family: 'Caveat', cursive;
+    color: rgba(136, 231, 136, .6);
+    font-size: 5.5rem;
+}
+
+.contenido-hero a {
+    margin-bottom: 3rem;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--whiteColor);
+}
+
+@media (min-width: 768px) {
+    .contenido-hero a {
+        display: block;
+    }
+}
+
+/** Sección de tareas **/
+
+@media (min-width: 768px) {
+    .contenedor-form {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(20, 19, 19, 0.85);
+        visibility: hidden;
+        overflow: hidden;
+    }
+    .active {
+        visibility: visible;
+        z-index: var(--z-modal);
+    }
+    .hidden {
+        visibility: hidden;
+    }
+}
+
+.formulario {
+    background-color: rgb(226, 224, 224);
+    padding: 3rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        width: 60%;
+        background-color: #dddddd;
+    }
+}
+
+.formulario #btnCerrarModal {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .formulario #btnCerrarModal {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 2.1rem;
+        color: var(--blackColor);
+    }
+}
+
+.campo label, .campo input, .campo textarea {
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .campo label, .campo input, .campo textarea {
+        display: block;
+        margin: 2rem auto;
+        width: 60%;
+    }
+}
+
+.campo input {
+    height: 3rem;
+    text-align: left;
+}
+
+.campo textarea {
+    resize: none;
+    height: 10rem;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .campo input, .campo textarea {
+        border: 0.1rem solid #9c9b9b;
+    }
+}
+
+.importancia-tareas {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .importancia-tareas {
+        text-align: center;
+        display: block;
+    }
+}
+
+.importancia-tareas label, .campo label {
+    display: block;
+    color: #1d1919;
+    font-family: 'Open Sans', cursive;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .importancia-tareas label {
+        display: inline-block;
+    }
+}

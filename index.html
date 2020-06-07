@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contenedor-spinner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <div class="contenedor-all">
+        <header class="site-header">
+            <div class="navegacion contenedor border">
+                <div class="menu-mobile">
+                    <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                <nav class="navegacion-principal border">
+                    <a href="#">Task Manager</a>
+                    <a href="#">Name Generator</a>
+                    <a href="#">All your homework</a>
+                    <a href="#"><i class="fas fa-moon" id="modoOscuro"></i></a>
+                </nav>
+            </div>
+        </header>
+        <div class="hero">
+            <div class="contenido-hero contenedor">
+                <h1>¿Deseas registrar una tarea?</h1>
+                <a href="#" class="boton border transparent" id="registrar">Registrar una tarea</a>
+            </div>
+        </div>
+        <div class="contenedor-form">
+            <section class="formulario contenedor border">
+                <h2>Registre una tarea</h2>
+                <a href="#" id="btnCerrarModal"><i class="fas fa-times" id="cerrar"></i></a>
+                <form class="formulario-tareas">
+                    <div class="campo">
+                        <label for="nombre">Nombre de la tarea:</label>
+                        <input type="text" id="nombre" autocomplete="off" placeholder="Nombre ...">
+                    </div>
+                    <div class="campo">
+                        <label for="descripcion">Descripción de la tarea:</label>
+                        <textarea id="descripcion" placeholder="Descripción ..."></textarea>
+                    </div>
+                    <div class="importancia-tareas">
+                        <label>Importancia de la tarea</label>
+                        <select id="importancia">
+                            <option selected disabled>-Seleccione la importancia-</option>
+                            <option value="normal">Normal</option>
+                            <option value="necesaria">Necesaria</option>
+                            <option value="urgente">Urgente</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+        <section class="seccion-tareas">
+            <h2>Lista de tareas</h2>
+            <div class="contenedor-tareas contenedor">
+
+            </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
