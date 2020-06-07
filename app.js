@@ -1,18 +1,12 @@
-import Interfaz from "./js/Clases/IU.js";
+import Interfaz from "./classes/IU.js";
 
 //Cuando se cargue el documento.
 document.addEventListener('DOMContentLoaded', () => {
     const iu = new Interfaz();
-    try {
-        iu.cargarPagina();
-        iu.menuResponsive();
-        iu.fijarNavegacion();
-        iu.importanciaTareas();
-        iu.controlarModal();
-        setTimeout(() => {
-            iu.revelarScroll();
-        }, 1200);
-    } catch (error) {
-        console.log(error);
-    }
+
+    iu.menuResponsive();
+    iu.revelarScroll();
+    iu.fijarNavegacion();
+    iu.cargarModal();
+    iu.importanciaTareas();
 });
